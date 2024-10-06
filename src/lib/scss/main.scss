@@ -1,0 +1,14 @@
+*, :global(body) {
+	margin: 0;
+	padding: 0;
+	font-family: $roboto;
+	color: $text;
+	text-decoration: none;
+}
+
+:global(body) {
+	background: $bg;
+	overflow-x: hidden;
+	min-height: 5000vh;
+}
+
