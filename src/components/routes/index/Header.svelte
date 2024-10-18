@@ -1,10 +1,54 @@
+<script lang="ts">
+	import Button from '$components/ui/Button.svelte';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
+	let loaded = false;
+
+	onMount(() => {
+		loaded = true;
+	});
+
+	function scrollIntoView(event: Event) {
+		const target = event.target as HTMLElement;
+		if (!target) return;
+
+		const href = target.getAttribute('href');
+		if (!href) return;
+
+		const el = document.querySelector(href);
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
+</script>
+
 <header>
-	<div class="bottom">
-		<h2>Bienvenue chez <img src="/images/logo-white.svg" alt="" />2EL</h2>
+	<div class="logo">
+		<div></div>
+		{#if loaded}
+			<img
+				in:fly={{ x: -450, duration: 2000, delay: 300, opacity: 1 }}
+				src="/images/logo.svg"
+				alt="logo"
+			/>
+			<h2 in:fly={{ x: -450, duration: 2000, delay: 300, opacity: 1 }}>2EL</h2>
+		{/if}
+	</div>
+	<div class="center">
+		<h1>Votre projet électrique, <br /> notre expertise</h1>
+		<Button link="#services" onclick={scrollIntoView}>Découvrir nos services</Button>
+	</div>
+	<div id="services" class="bottom">
+		<h2>Bienvenue<span>chez <img src="/images/logo-white.svg" alt="" />2EL</span></h2>
 		<p>
 			C2EL est un bureau d’études de sous-traitance d’études électriques spécialisé dans la gestion
-			de projet. Notre équipe qualifiée et expérimentée est prête à vous accompagner dans la
-			réalisation de vos projets électtriques, de la conception à la mise en service
+			de projet.
+			<span>
+				Notre équipe qualifiée et expérimentée est prête à vous accompagner dans la réalisation de
+				vos projets électtriques, de la conception à la mise en service
+			</span>
 		</p>
 	</div>
 </header>
@@ -33,8 +77,58 @@
 			z-index: -1;
 		}
 
+		.logo {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			top: 8rem;
+			left: 5rem;
+			overflow: hidden;
+
+			> div {
+				width: 0.3rem;
+				height: 10rem;
+				margin-right: 4rem;
+				position: relative;
+				z-index: 1;
+				background: $primary;
+				border-radius: 2rem;
+			}
+
+			img {
+				height: 8rem;
+			}
+
+			h2 {
+				margin-left: 1rem;
+				font-size: 8rem;
+			}
+		}
+
+		.center {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+
+			h1 {
+				font-size: 2.5rem;
+				text-align: center;
+
+				br {
+					display: none;
+				}
+			}
+		}
+
 		.bottom {
 			width: 72rem;
+			max-width: 90%;
 			position: absolute;
 			bottom: 1rem;
 			left: 50%;
@@ -51,9 +145,75 @@
 				gap: 0.1rem;
 				align-items: center;
 
+				span {
+					margin-left: 0.5rem;
+				}
+
 				img {
 					height: 2rem;
-					margin-left: 1rem;
+					margin-left: 0.5rem;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 850px) {
+		header {
+			.logo {
+				top: 2rem;
+				left: 2rem;
+
+				> div {
+					margin-right: 1rem;
+				}
+			}
+
+			.center > h1 {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		header {
+			.logo {
+				> div {
+					height: 5rem;
+				}
+
+				img {
+					height: 4rem;
+				}
+
+				h2 {
+					margin-left: 0.5rem;
+					font-size: 4rem;
+				}
+			}
+
+			.center > h1 br {
+				display: block;
+			}
+
+			.bottom span {
+				display: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		header {
+			.logo {
+				> div {
+					height: 4rem;
+				}
+
+				img {
+					height: 3rem;
+				}
+
+				h2 {
+					font-size: 3rem;
 				}
 			}
 		}

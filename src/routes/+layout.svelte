@@ -10,7 +10,7 @@
 	};
 	const { children, data }: Props = $props();
 
-	const urls = ['/', '/services', '/logiciels', '/contact', '/projets', '/equipe'];
+	const urls = ['/', '/services', '/logiciels', '/projets', '/equipe'];
 	// svelte-ignore non_reactive_update
 	let activeLink = data.url;
 
@@ -39,6 +39,7 @@
 		min-height: 100dvh;
 		position: absolute;
 		top: 0;
-		z-index: -1;
+		left: 0;
+		overflow-x: hidden;
 	}
 </style>
