@@ -4,16 +4,17 @@
 	type Props = {
 		children: Snippet;
 		link?: string;
+		name?: string;
 		onclick?: (event: Event) => void;
 	};
 
-	const { children, link, onclick }: Props = $props();
+	const { children, link, onclick, name }: Props = $props();
 </script>
 
 {#if link}
 	<a href={link} {onclick}>{@render children()}</a>
 {:else}
-	<button {onclick}>{@render children()}</button>
+	<button {name} {onclick}>{@render children()}</button>
 {/if}
 
 <style lang="scss">

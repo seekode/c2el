@@ -34,16 +34,24 @@
 <div class="container">
 	<div class="left">
 		<div style={`top: calc((100% / 8) * ${active * 2 + 1})`}></div>
-		<button class:active={active === 0} onclick={() => (active = 0)}>
+		<button
+			aria-label="Expertise Technique"
+			class:active={active === 0}
+			onclick={() => (active = 0)}
+		>
 			<IconExpert />
 		</button>
-		<button class:active={active === 1} onclick={() => (active = 1)}>
+		<button aria-label="Innovation" class:active={active === 1} onclick={() => (active = 1)}>
 			<IconInnov />
 		</button>
-		<button class:active={active === 2} onclick={() => (active = 2)}>
+		<button aria-label="Personnalisation" class:active={active === 2} onclick={() => (active = 2)}>
 			<IconCustom />
 		</button>
-		<button class:active={active === 3} onclick={() => (active = 3)}>
+		<button
+			aria-label="Engagement envers la Qualité"
+			class:active={active === 3}
+			onclick={() => (active = 3)}
+		>
 			<IconHandCheck />
 		</button>
 	</div>

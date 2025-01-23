@@ -11,7 +11,7 @@
 	<button class="close" onclick={() => (open = !open)} aria-label="Fermer le menu"></button>
 {/if}
 <nav class:open>
-	<button onclick={() => (open = !open)}>
+	<button onclick={() => (open = !open)} aria-label="Ouvrir le menu">
 		<img src="/images/logo.svg" alt="logo" />
 	</button>
 	<div>

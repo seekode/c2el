@@ -1,3 +1,5 @@
+@use 'src/lib/scss/variables' as *;
+
 :global(html) {
 	scroll-behavior: smooth;
 }
