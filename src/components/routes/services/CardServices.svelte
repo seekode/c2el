@@ -1,15 +1,18 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	type Props = {
 		img: string;
 		title: string;
 		description: string;
+		id: number;
 	};
 
-	const { img, title, description }: Props = $props();
+	const { id, img, title, description }: Props = $props();
 </script>
 
 <section>
-	<img src={`/images/services/${img}.webp`} alt={title} />
+	<img src={`/images/services/${img}.webp`} alt={title} loading="lazy" />
 	<h2>{title}</h2>
 	<p>{description}</p>
 </section>

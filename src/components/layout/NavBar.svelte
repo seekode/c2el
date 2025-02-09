@@ -1,27 +1,35 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
 	type Props = {
 		activeLink: number;
 	};
 	const { activeLink }: Props = $props();
 
 	let open = $state(false);
+	let ready = $state(false);
+
+	onMount(() => (ready = true));
 </script>
 
 {#if open}
 	<button class="close" onclick={() => (open = !open)} aria-label="Fermer le menu"></button>
 {/if}
-<nav class:open>
-	<button onclick={() => (open = !open)} aria-label="Ouvrir le menu">
-		<img src="/images/logo.svg" alt="logo" />
-	</button>
-	<div>
-		<a class:active={activeLink === 0} href="/">Présentation</a>
-		<a class:active={activeLink === 1} href="/services">Services</a>
-		<a class:active={activeLink === 2} href="/logiciels">Logiciels</a>
-		<a class:active={activeLink === 3} href="/projets">Projets réalisés</a>
-		<a class:active={activeLink === 4} href="/equipe">Équipe</a>
-	</div>
-</nav>
+{#if ready}
+	<nav class:open transition:fly={{ y: -200, duration: 2000 }}>
+		<button onclick={() => (open = !open)} aria-label="Ouvrir le menu">
+			<img src="/images/logo.svg" alt="logo" width="42.7" height="48" />
+		</button>
+		<div>
+			<a class:active={activeLink === 0} href="/">Présentation</a>
+			<a class:active={activeLink === 1} href="/services">Services</a>
+			<a class:active={activeLink === 2} href="/logiciels">Logiciels</a>
+			<a class:active={activeLink === 3} href="/projets">Projets réalisés</a>
+			<a class:active={activeLink === 4} href="/equipe">Équipe</a>
+		</div>
+	</nav>
+{/if}
 
 <style lang="scss">
 	.close {
@@ -59,6 +67,7 @@
 
 			img {
 				height: 3rem;
+				width: auto;
 			}
 		}
 

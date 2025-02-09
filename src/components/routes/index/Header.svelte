@@ -24,24 +24,69 @@
 	}
 </script>
 
+<svelte:head>
+	<link
+		rel="preload"
+		href="/images/header.webp"
+		as="image"
+		type="image/webp"
+		fetchpriority="high"
+	/>
+	<style>
+		.center h1 {
+			font-size: 2.5rem;
+			text-align: center;
+			content-visibility: auto;
+		}
+		@media (min-width: 768px) {
+			.center h1 {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+</svelte:head>
+
 <header>
 	<div class="logo">
 		<div></div>
 		{#if loaded}
 			<img
-				in:fly={{ x: -450, duration: 2000, delay: 300, opacity: 1 }}
+				in:fly={{ x: -450, duration: 1000, delay: 200, opacity: 1 }}
 				src="/images/logo.svg"
-				alt="logo"
+				alt="Logo C2EL"
+				width="113"
+				height="128"
+				loading="eager"
+				decoding="async"
 			/>
-			<h2 in:fly={{ x: -450, duration: 2000, delay: 300, opacity: 1 }}>2EL</h2>
+			<h2 in:fly={{ x: -450, duration: 1000, delay: 200, opacity: 1 }}>2EL</h2>
 		{/if}
 	</div>
 	<div class="center">
-		<h1>Votre projet électrique, <br /> notre expertise</h1>
+		<h1 style="display: block; visibility: visible;">
+			Votre projet électrique, <br /> notre expertise
+		</h1>
 		<Button link="#services" onclick={scrollIntoView}>Découvrir nos services</Button>
 	</div>
-	<div id="services" class="bottom">
-		<h2>Bienvenue<span>chez <img src="/images/logo-white.svg" alt="" />2EL</span></h2>
+	<div
+		id="services"
+		class="bottom"
+		data-aos="fade-up"
+		data-aos-offset="-200"
+		data-aos-duration="1500"
+	>
+		<h2>
+			Bienvenue<span
+				>chez <img
+					src="/images/logo-white.svg"
+					alt="Logo C2EL"
+					width="30"
+					height="34"
+					loading="lazy"
+					decoding="async"
+				/>2EL</span
+			>
+		</h2>
 		<p>
 			C2EL est un bureau d’études de sous-traitance d’études électriques spécialisé dans la gestion
 			de projet.
@@ -69,11 +114,12 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-image: url('/images/header.jpg');
+			background-image: url('/images/header.webp');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			filter: blur(5px);
+			filter: blur(2px);
+			will-change: auto;
 			z-index: -1;
 		}
 
@@ -97,6 +143,7 @@
 
 			img {
 				height: 8rem;
+				width: auto;
 			}
 
 			h2 {
@@ -119,6 +166,8 @@
 			h1 {
 				font-size: 2.5rem;
 				text-align: center;
+				display: block;
+				visibility: visible;
 
 				br {
 					display: none;
@@ -127,12 +176,10 @@
 		}
 
 		.bottom {
-			width: 72rem;
-			max-width: 90%;
+			width: 100%;
 			position: absolute;
 			bottom: 1rem;
-			left: 50%;
-			transform: translateX(-50%);
+			left: 0;
 			display: flex;
 			gap: 1rem;
 			flex-direction: column;
@@ -153,6 +200,11 @@
 					height: 2rem;
 					margin-left: 0.5rem;
 				}
+			}
+
+			p {
+				width: 72rem;
+				max-width: 90%;
 			}
 		}
 	}

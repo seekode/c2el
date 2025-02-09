@@ -4,20 +4,20 @@
 
 <section>
 	<div class="content">
-		<h2><img src="/images/logo.svg" alt="logo" />2EL</h2>
-		<p>
+		<h2><img src="/images/logo.svg" alt="logo" loading="lazy" width="71" height="80" />2EL</h2>
+		<p data-aos="fade-up">
 			Bienvenue chez C2EL, votre partenaire d'excellence en ingénierie électrique. Fondée sur les
 			principes de l'innovation, de la précision et de la qualité, C2EL se distingue dans le domaine
 			de l'ingénierie électrique par son approche personnalisée et son engagement envers la réussite
 			de chaque projet.
 		</p>
-		<p>
+		<p data-aos="fade-up">
 			Notre mission est de fournir des solutions d'ingénierie électrique de premier plan qui
 			répondent aux besoins spécifiques de nos clients. Chez C2EL, nous nous engageons à transformer
 			vos idées en réalités fonctionnelles, efficaces et sécurisées, en utilisant les technologies
 			les plus avancées et les meilleures pratiques du secteur.
 		</p>
-		<div class="carrousel">
+		<div class="carrousel" data-aos="fade-up">
 			<PresCarrousel />
 		</div>
 	</div>
@@ -60,7 +60,7 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			background: url('/images/pres.jpg');
+			background: url('/images/pres.webp');
 
 			&::before {
 				content: '';

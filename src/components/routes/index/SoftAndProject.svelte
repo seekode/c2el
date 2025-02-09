@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Button from '$components/ui/Button.svelte';
-	import { text } from '@sveltejs/kit';
 
 	const items = [
 		{
@@ -13,7 +12,7 @@
 			link: '/logiciels'
 		},
 		{
-			img: 'projects.jpg',
+			img: 'projects.webp',
 			title: 'Projets réalisés',
 			text: [
 				'Chez C2EL nous sommes fiers de travailler sérieusement sur vos projets, c’est pourquoi nous sommes ravi de les mettre en avant sur notre site.',
@@ -24,17 +23,23 @@
 	];
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</svelte:head>
+
 {#each items as item, i}
 	<section class:reverse={i % 2 !== 0}>
-		<div>
-			<img src={`images/${item.img}`} alt={item.title} />
+		<div data-aos={i == 0 ? 'fade-right' : 'fade-left'}>
+			<img src={`images/${item.img}`} alt={item.title} loading="lazy" width="300" height="300" />
 		</div>
 		<div>
-			<h2>{item.title}</h2>
-			{#each item.text as text}
-				<p>{text}</p>
-			{/each}
-			<Button link={item.link}>Plus d'informations</Button>
+			<div data-aos={i == 0 ? 'fade-left' : 'fade-right'}>
+				<h2>{item.title}</h2>
+				{#each item.text as text}
+					<p>{text}</p>
+				{/each}
+			</div>
+			<Button link={item.link} dataAos="fade-up">Plus d'informations</Button>
 		</div>
 	</section>
 {/each}
@@ -62,7 +67,9 @@
 
 		img {
 			max-width: 100%;
-			max-height: 25vw;
+			max-height: 300px;
+			width: auto;
+			height: auto;
 			border-radius: 0.5rem;
 		}
 

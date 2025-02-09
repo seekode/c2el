@@ -3,6 +3,8 @@
 	import NavBar from '$components/layout/NavBar.svelte';
 	import type { Snippet } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import AOS from 'aos';
 
 	type Props = {
 		children: Snippet;
@@ -18,6 +20,13 @@
 		const result = urls.indexOf(activeLink) < urls.indexOf(data.url);
 		activeLink = data.url;
 		return result;
+	});
+
+	onMount(() => {
+		AOS.init({
+			duration: 500,
+			easing: 'ease-in-out'
+		});
 	});
 </script>
 

@@ -5,16 +5,17 @@
 		children: Snippet;
 		link?: string;
 		name?: string;
+		dataAos?: string;
 		onclick?: (event: Event) => void;
 	};
 
-	const { children, link, onclick, name }: Props = $props();
+	const { children, link, onclick, name, dataAos }: Props = $props();
 </script>
 
 {#if link}
-	<a href={link} {onclick}>{@render children()}</a>
+	<a href={link} {onclick} data-aos={dataAos}>{@render children()}</a>
 {:else}
-	<button {name} {onclick}>{@render children()}</button>
+	<button {name} {onclick} data-aos={dataAos}>{@render children()}</button>
 {/if}
 
 <style lang="scss">

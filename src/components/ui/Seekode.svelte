@@ -1,6 +1,6 @@
 <section>
 	<a href="https://seekode.dev">
-		<img src="images/seekode.svg" alt="Seekode logo" />
+		<img src="images/seekode.svg" alt="Seekode logo" loading="lazy" width="17.7" height="20.7" />
 		© 2024 Nicolas Texier. Tous droits réservés.
 	</a>
 </section>

@@ -5,8 +5,8 @@
 
 <header>
 	<h1>Logiciels</h1>
-	<div>
-		<img src="/images/softwares/softwares.webp" alt="header" />
+	<div data-aos="zoom-in" data-aos-duration="1000">
+		<img src="/images/softwares/softwares.webp" alt="header" loading="lazy" />
 	</div>
 </header>
 <section>

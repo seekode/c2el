@@ -1,10 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 	<meta charset="utf-8" />
 	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1" />
+
+	<!-- Resource Hints -->
+	<link rel="preload" href="%sveltekit.assets%/images/header.webp" as="image" fetchpriority="high" />
+	<link rel="preload" href="%sveltekit.assets%/images/logo.svg" as="image" fetchpriority="high" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+	<!-- Critical CSS -->
+	<style>
+		.center h1 {
+			font-size: 2.5rem;
+			text-align: center;
+			display: block;
+			visibility: visible;
+		}
+	</style>
+
 	%sveltekit.head%
 	<meta property="og:title" content="Votre Expert en Études Électriques C2EL">
 	<meta property="og:url" content="https://www.c2el.fr/">
@@ -24,11 +41,18 @@
 		content="Découvrez comment C2EL peut transformer vos projets avec des solutions d'études électriques sur mesure. Expertise reconnue en sous-traitance pour tous vos besoins.">
 	<meta name="keywords" content="électriques, C2EL, études électriques, projets électriques" />
 	<meta name="author" content="Nicolas Texier | seekode" />
-	<title>C2EL</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="preload" as="style" onload="this.rel='stylesheet'">
+	<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<noscript>
+		<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+	</noscript>
+	<title>C2EL - Bureau d'études électriques</title>
 </head>
 
 <body data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
+
 </body>
 
 </html>

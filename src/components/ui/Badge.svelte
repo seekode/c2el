@@ -9,7 +9,7 @@
 </script>
 
 <a href={link} target="_blank" style={`background: ${color}`}>
-	<img src={img} alt="logo" />
+	<img src={img} alt="logo" loading="lazy" width="10" height="10" />
 	<p>{title}</p>
 </a>
 

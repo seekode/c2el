@@ -43,7 +43,7 @@
 		emblématique et sommes impatients de poursuivre notre mission d'excellence dans tous nos projets
 		futurs.
 	</p>
-	<img src="/images/projects/halles.webp" alt="halles" />
+	<img src="/images/projects.webp" alt="halles" loading="lazy" />
 </section>
 <Footer />
 <Seekode />

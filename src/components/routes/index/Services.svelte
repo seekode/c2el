@@ -1,11 +1,17 @@
-<script>
+<script lang="ts">
 	import Button from '$components/ui/Button.svelte';
 </script>
 
 <section>
 	<div class="left">
-		<div>
-			<img src="/images/index/services-1.jpg" alt="services" />
+		<div data-aos="fade-right">
+			<img
+				src="/images/index/services-1.webp"
+				loading="lazy"
+				alt="services"
+				width="141"
+				height="88"
+			/>
 			<div>
 				<h3>Conception électrique</h3>
 				<p>
@@ -15,8 +21,14 @@
 				</p>
 			</div>
 		</div>
-		<div>
-			<img src="/images/index/services-2.jpg" alt="services" />
+		<div data-aos="fade-right">
+			<img
+				src="/images/index/services-2.webp"
+				loading="lazy"
+				alt="services"
+				width="141"
+				height="88"
+			/>
 			<div>
 				<h3>Conception électrique</h3>
 				<p>
@@ -26,8 +38,14 @@
 				</p>
 			</div>
 		</div>
-		<div>
-			<img src="/images/index/services-3.jpg" alt="services" />
+		<div data-aos="fade-right">
+			<img
+				src="/images/index/services-3.webp"
+				loading="lazy"
+				alt="services"
+				width="141"
+				height="88"
+			/>
 			<div>
 				<h3>Conception électrique</h3>
 				<p>
@@ -39,8 +57,8 @@
 		</div>
 	</div>
 	<div class="right">
-		<img src="/images/services.png" alt="services" />
-		<Button link="/services">Plus d'informations</Button>
+		<img src="/images/services.png" loading="lazy" alt="services" width="330" height="250" />
+		<Button link="/services" dataAos="zoom-up">Plus d'informations</Button>
 	</div>
 </section>
 
@@ -67,6 +85,9 @@
 				background: linear-gradient(to right, $text, #b7d8e9);
 
 				img {
+					max-height: 88px;
+					height: auto;
+					width: auto;
 					border-radius: 0.3rem;
 				}
 
@@ -98,6 +119,7 @@
 
 			img {
 				width: 100%;
+				height: auto;
 			}
 		}
 	}

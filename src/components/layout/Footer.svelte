@@ -27,7 +27,7 @@
 		{
 			title: '07 56 99 17 07',
 			img: '/images/networks/phone.svg',
-			color: '#009C64',
+			color: '#017C4B',
 			link: 'tel:+33756991707'
 		},
 		{
@@ -47,12 +47,12 @@
 
 <footer>
 	<div class="left">
-		<div>
+		<div data-aos="zoom-in">
 			<Map />
 		</div>
 	</div>
 	<div class="right">
-		<div>
+		<div data-aos="zoom-in">
 			<h2>Partager</h2>
 			<div>
 				{#each networks as { title, img, color, link }}
@@ -60,7 +60,7 @@
 				{/each}
 			</div>
 		</div>
-		<div>
+		<div data-aos="zoom-in">
 			<h2>Contact</h2>
 			<div>
 				{#each contacts as { title, img, color, link }}

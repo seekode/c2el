@@ -7,8 +7,6 @@
 	onMount(async () => {
 		const leaflet = await import('leaflet');
 
-		console.log(leaflet.map);
-
 		map = leaflet.map(mapElement, {
 			center: [43.883786162897835, 1.5996887266654025],
 			zoom: 15,
