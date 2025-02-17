@@ -30,11 +30,12 @@
 				height="88"
 			/>
 			<div>
-				<h3>Conception électrique</h3>
+				<h3>Appel d’offres</h3>
 				<p>
-					C2EL élève la conception électrique à un niveau supérieur, combinant expertise technique
-					et innovation pour créer des solutions sur mesure et efficaces. Notre approche garantit
-					des projets optimisés, sûrs et conformes aux normes en vigueur.
+					Chez C2EL, notre expertise en appels d'offres transforme vos projets d'ingénierie
+					électrique en propositions gagnantes, grâce à une préparation technique précise et
+					innovante. Nous maximisons vos chances de succès en fournissant des dossiers complets et
+					compétitifs, reflétant notre engagement envers l'excellence.
 				</p>
 			</div>
 		</div>
@@ -47,11 +48,11 @@
 				height="88"
 			/>
 			<div>
-				<h3>Conception électrique</h3>
+				<h3>Assistance technique</h3>
 				<p>
-					C2EL élève la conception électrique à un niveau supérieur, combinant expertise technique
-					et innovation pour créer des solutions sur mesure et efficaces. Notre approche garantit
-					des projets optimisés, sûrs et conformes aux normes en vigueur.
+					C2EL offre une assistance technique experte, assurant un soutien fiable et personnalisé à
+					chaque phase de votre projet électrique. Nous nous engageons à résoudre vos défis
+					techniques avec rapidité et précision.
 				</p>
 			</div>
 		</div>

@@ -65,6 +65,10 @@
 			gap: 1rem;
 		}
 
+		h2 {
+			text-align: center;
+		}
+
 		img {
 			max-width: 100%;
 			max-height: 300px;
