@@ -18,3 +18,7 @@
 	background: $bg;
 	overflow-x: hidden;
 }
+
+:global(section) {
+	width: 100%;
+}

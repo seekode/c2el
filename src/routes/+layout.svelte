@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import NavBar from '$components/layout/NavBar.svelte';
-	import type { Snippet } from 'svelte';
-	import { fly } from 'svelte/transition';
-	import { onMount } from 'svelte';
+	import NavBar from '$lib/components/layout/NavBar.svelte';
 	import AOS from 'aos';
+	import type { Snippet } from 'svelte';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	type Props = {
 		children: Snippet;
@@ -13,7 +12,6 @@
 	const { children, data }: Props = $props();
 
 	const urls = ['/', '/services', '/logiciels', '/projets', '/equipe'];
-	// svelte-ignore non_reactive_update
 	let activeLink = data.url;
 
 	let next = $derived.by(() => {
@@ -50,5 +48,8 @@
 		top: 0;
 		left: 0;
 		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 </style>

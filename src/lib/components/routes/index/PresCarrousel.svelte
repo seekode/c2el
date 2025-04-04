@@ -1,9 +1,9 @@
 <script lang="ts">
-	import IconExpert from '~icons/mingcute/medal-fill';
-	import IconInnov from '~icons/mingcute/refresh-3-fill';
-	import IconCustom from '~icons/mingcute/paint-2-fill';
-	import IconHandCheck from '~icons/mingcute/heart-hand-fill';
 	import { fade } from 'svelte/transition';
+	import IconHandCheck from '~icons/mingcute/heart-hand-fill';
+	import IconExpert from '~icons/mingcute/medal-fill';
+	import IconCustom from '~icons/mingcute/paint-2-fill';
+	import IconInnov from '~icons/mingcute/refresh-3-fill';
 
 	const items = [
 		{

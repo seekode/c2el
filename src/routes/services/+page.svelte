@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Footer from '$components/layout/Footer.svelte';
-	import CardServices from '$components/routes/services/CardServices.svelte';
-	import Seekode from '$components/ui/Seekode.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
+	import CardServices from '$lib/components/routes/services/CardServices.svelte';
+	import Seekode from '$lib/components/ui/Seekode.svelte';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
@@ -60,7 +60,7 @@
 	<div>
 		{#each cards as { img, title, description }, i}
 			<div transition:fly={{ y: 200, duration: 1000, delay: i * 200 }}>
-				<CardServices id={i} {img} {title} {description} />
+				<CardServices {img} {title} {description} />
 			</div>
 		{/each}
 	</div>

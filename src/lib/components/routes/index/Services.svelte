@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '$components/ui/Button.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
 </script>
 
 <section>
@@ -121,6 +121,7 @@
 			img {
 				width: 100%;
 				height: auto;
+				max-width: 40rem;
 			}
 		}
 	}

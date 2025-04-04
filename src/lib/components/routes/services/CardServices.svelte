@@ -1,14 +1,11 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-
 	type Props = {
 		img: string;
 		title: string;
 		description: string;
-		id: number;
 	};
 
-	const { id, img, title, description }: Props = $props();
+	const { img, title, description }: Props = $props();
 </script>
 
 <section>

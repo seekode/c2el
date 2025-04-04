@@ -2,6 +2,8 @@
 	import { onDestroy, onMount } from 'svelte';
 
 	let mapElement: HTMLDivElement;
+
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let map: any | undefined;
 
 	onMount(async () => {

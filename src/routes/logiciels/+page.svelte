@@ -1,6 +1,6 @@
 <script>
-	import Footer from '$components/layout/Footer.svelte';
-	import Seekode from '$components/ui/Seekode.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
+	import Seekode from '$lib/components/ui/Seekode.svelte';
 </script>
 
 <header>

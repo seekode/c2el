@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Badge from '$components/ui/Badge.svelte';
-	import Map from '$components/ui/Map.svelte';
+	import Badge from "../ui/Badge.svelte";
+	import Map from "../ui/Map.svelte";
+
 
 	const networks: Array<{ title: string; img: string; color: string; link: string }> = [
 		{

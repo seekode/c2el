@@ -1,10 +1,10 @@
 <script>
-	import Footer from '$components/layout/Footer.svelte';
-	import Header from '$components/routes/index/Header.svelte';
-	import Pres from '$components/routes/index/Pres.svelte';
-	import Services from '$components/routes/index/Services.svelte';
-	import SoftAndProject from '$components/routes/index/SoftAndProject.svelte';
-	import Seekode from '$components/ui/Seekode.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
+	import Header from '$lib/components/routes/index/Header.svelte';
+	import Pres from '$lib/components/routes/index/Pres.svelte';
+	import Services from '$lib/components/routes/index/Services.svelte';
+	import SoftAndProject from '$lib/components/routes/index/SoftAndProject.svelte';
+	import Seekode from '$lib/components/ui/Seekode.svelte';
 </script>
 
 <Header />
